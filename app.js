@@ -32,7 +32,7 @@ const menu = [
     category: "China",
     price: 5.99,
     img:
-      "https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg",
+      "https://images.pexels.com/photos/5116817/pexels-photo-5116817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     desc: `Dan dan noodle, serving with green onion `,
   },
   {
@@ -81,22 +81,70 @@ const menu = [
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
-
-const btncontainerDOM =document.querySelector(".btn-container")
-var buttons = ["All","Korea","Japan","China"]
-
-buttons.forEach(function(item){
-  const all = document.createElement("button")
-  const text = document.createTextNode(item)
-  all.appendChild(text)
-  all.classList.add("btn-container","btn-item")
-  btncontainerDOM.appendChild(all)
-})
+/******** BTNS PART START ********/
+const btnDOM = document.querySelector(".btn-container")
 
 
-const menuItemsDOM = document.querySelector(".section-center")
-const lofmenu = menu.length
-for(var i=0;i<lofmenu;i++){
+const allbtn = document.createElement("button")
+btnDOM.appendChild(allbtn)
+allbtn.innerText = "All"
+allbtn.classList.add("btn-item")
+
+const koreabtn = document.createElement("button")
+btnDOM.appendChild(koreabtn)
+koreabtn.innerText = "Korea"
+koreabtn.classList.add("btn-item")
+
+const japanbtn = document.createElement("button")
+btnDOM.appendChild(japanbtn)
+japanbtn.innerText = "Japan"
+japanbtn.classList.add("btn-item")
+
+const chinabtn = document.createElement("button")
+btnDOM.appendChild(chinabtn)
+chinabtn.innerText = "China"
+chinabtn.classList.add("btn-item")
+
+/******** BTNS PART END ********/
+
+
+/******** CONTENT PART START ********/
+
+for (var index=0;index<menu.length;index++){
+  const itemDOM = document.querySelector(".section-center")
+
   const singleItem = document.createElement("div")
-  menuItemsDOM.appendChild(singleItem)
+  singleItem.className = ("col-sm-12 col-lg-6 menu-items")
+  itemDOM.appendChild(singleItem)
+  /** Image Item Start **/
+  const imgItem = document.createElement("img")
+  const urlItem = menu[index].img
+  imgItem.setAttribute("src", urlItem)
+  imgItem.classList.add("photo")
+  singleItem.appendChild(imgItem)
+  /** Image Item End   **/
+  console.log(menu.length)
+  /** Menu Start **/
+  console.log(index)
+  const menuItem = document.createElement("div")
+  menuItem.classList.add("menu-info")
+  const titleItem = document.createElement("div")
+  titleItem.classList.add("menu-title")
+  titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
+  const textItem = document.createElement("div")
+  textItem.classList.add("menu-text")
+  const textContent = menu[index].desc
+  textItem.innerText= textContent
+  menuItem.appendChild(titleItem)
+  menuItem.appendChild(textItem)
+  singleItem.appendChild(menuItem)
 }
+
+
+
+
+
+/** Menu  End **/
+
+
+/******** CONTENT PART END ********/
