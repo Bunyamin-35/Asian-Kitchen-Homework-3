@@ -113,6 +113,7 @@ chinabtn.classList.add("btn-item")
 allbtn.addEventListener("click",clickall)
 
 function clickall(){
+  reset()
   for (var index=0;index<menu.length;index++){
     const itemDOM = document.querySelector(".section-center")
     
@@ -159,6 +160,7 @@ function clickall(){
 koreabtn.addEventListener("click",clickkorea)
 
 function clickkorea() {
+  reset()
   for (var index=0;index<menu.length;index++){
     if(menu[index].category==="Korea"){
 
@@ -208,6 +210,7 @@ function clickkorea() {
 japanbtn.addEventListener("click",clickjapan)
 
 function clickjapan() {
+  reset()
   for (var index=0;index<menu.length;index++){
     if(menu[index].category==="Japan"){
 
@@ -258,6 +261,7 @@ function clickjapan() {
 chinabtn.addEventListener("click",clickchina)
 
 function clickchina() {
+  reset()
   for (var index=0;index<menu.length;index++){
     if(menu[index].category==="China"){
 
@@ -301,12 +305,10 @@ function clickchina() {
   }  
 }
 /******** CONTENT PART CHINA END ********/
-
-
-
-
-
 /** Menu  End **/
-
+function reset(){
+  const contentDOM = document.querySelector(".section-center")
+  contentDOM.innerHTML=""
+}
 
 /******** CONTENT PART END ********/
