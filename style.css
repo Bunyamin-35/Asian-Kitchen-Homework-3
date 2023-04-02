@@ -24,11 +24,25 @@ h2 {
   justify-content: center;
   align-items: center;
   margin: 25px 0;
+  
 }
 .btn-item {
   margin-left: 15px;
 }
 
+.btn-item {
+  color: #ff6a23;
+  width: 80px;
+  background:#fff;
+  border: 1px solid #ff6a23;
+  border-radius: 10px;
+  outline: 2px solid #fff;
+  transition-duration: 0.25s;
+}
+
+.btn-item:hover {
+  outline-offset: 2px;
+}
 
 .photo {
   width: 30%;
