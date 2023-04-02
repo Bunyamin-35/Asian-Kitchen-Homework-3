@@ -107,38 +107,200 @@ chinabtn.classList.add("btn-item")
 
 /******** BTNS PART END ********/
 
-
 /******** CONTENT PART START ********/
+/******** CONTENT PART ALL START ********/
 
-for (var index=0;index<menu.length;index++){
-  const itemDOM = document.querySelector(".section-center")
+allbtn.addEventListener("click",clickall)
 
-  const singleItem = document.createElement("div")
-  singleItem.className = ("col-sm-12 col-lg-6 menu-items")
-  itemDOM.appendChild(singleItem)
-  /** Image Item Start **/
-  const imgItem = document.createElement("img")
-  const urlItem = menu[index].img
-  imgItem.setAttribute("src", urlItem)
-  imgItem.classList.add("photo")
-  singleItem.appendChild(imgItem)
-  /** Image Item End   **/
-  console.log(menu.length)
-  /** Menu Start **/
-  console.log(index)
-  const menuItem = document.createElement("div")
-  menuItem.classList.add("menu-info")
-  const titleItem = document.createElement("div")
-  titleItem.classList.add("menu-title")
-  titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
-  const textItem = document.createElement("div")
-  textItem.classList.add("menu-text")
-  const textContent = menu[index].desc
-  textItem.innerText= textContent
-  menuItem.appendChild(titleItem)
-  menuItem.appendChild(textItem)
-  singleItem.appendChild(menuItem)
+function clickall(){
+  for (var index=0;index<menu.length;index++){
+    const itemDOM = document.querySelector(".section-center")
+    
+    const singleItem = document.createElement("div")
+    singleItem.className = ("col-sm-12 col-lg-6 menu-items")
+    itemDOM.appendChild(singleItem)
+
+    /** Image Item Start **/
+    const imgItem = document.createElement("img")
+    const urlItem = menu[index].img
+    imgItem.setAttribute("src", urlItem)
+    imgItem.classList.add("photo")
+    singleItem.appendChild(imgItem)
+    /** Image Item End   **/
+    
+    //console.log(menu.length)
+    /** Menu Start **/
+    //console.log(index)
+    
+    const menuItem = document.createElement("div")
+    menuItem.classList.add("menu-info")
+    
+    const titleItem = document.createElement("div")
+    titleItem.classList.add("menu-title")
+    
+    titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
+    
+    const textItem = document.createElement("div")
+    textItem.classList.add("menu-text")
+    
+    const textContent = menu[index].desc
+    
+    textItem.innerText= textContent
+    
+    menuItem.appendChild(titleItem)
+    menuItem.appendChild(textItem)
+    singleItem.appendChild(menuItem)
+  }
 }
+/******** CONTENT PART ALL END ********/
+
+/******** CONTENT PART KOREA START ********/
+
+koreabtn.addEventListener("click",clickkorea)
+
+function clickkorea() {
+  for (var index=0;index<menu.length;index++){
+    if(menu[index].category==="Korea"){
+
+      const itemDOM = document.querySelector(".section-center")
+      
+      const singleItem = document.createElement("div")
+      singleItem.className = ("col-sm-12 col-lg-6 menu-items")
+      itemDOM.appendChild(singleItem)
+      
+      /** Image Item Start **/
+      const imgItem = document.createElement("img")
+      const urlItem = menu[index].img
+      imgItem.setAttribute("src", urlItem)
+      imgItem.classList.add("photo")
+      singleItem.appendChild(imgItem)
+      /** Image Item End   **/
+      
+      //console.log(menu.length)
+      /** Menu Start **/
+      //console.log(index)
+      
+      const menuItem = document.createElement("div")
+      menuItem.classList.add("menu-info")
+      
+      const titleItem = document.createElement("div")
+      titleItem.classList.add("menu-title")
+      
+      titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
+      
+      const textItem = document.createElement("div")
+      textItem.classList.add("menu-text")
+      
+      const textContent = menu[index].desc
+      
+      textItem.innerText= textContent
+      
+      menuItem.appendChild(titleItem)
+      menuItem.appendChild(textItem)
+      singleItem.appendChild(menuItem)
+    }
+  }  
+}
+/******** CONTENT PART KOREA END ********/
+
+/******** CONTENT PART JAPAN START ********/
+
+japanbtn.addEventListener("click",clickjapan)
+
+function clickjapan() {
+  for (var index=0;index<menu.length;index++){
+    if(menu[index].category==="Japan"){
+
+      const itemDOM = document.querySelector(".section-center")
+      
+      const singleItem = document.createElement("div")
+      singleItem.className = ("col-sm-12 col-lg-6 menu-items")
+      itemDOM.appendChild(singleItem)
+      
+      /** Image Item Start **/
+      const imgItem = document.createElement("img")
+      const urlItem = menu[index].img
+      imgItem.setAttribute("src", urlItem)
+      imgItem.classList.add("photo")
+      singleItem.appendChild(imgItem)
+      /** Image Item End   **/
+      
+      //console.log(menu.length)
+      /** Menu Start **/
+      //console.log(index)
+      
+      const menuItem = document.createElement("div")
+      menuItem.classList.add("menu-info")
+      
+      const titleItem = document.createElement("div")
+      titleItem.classList.add("menu-title")
+      
+      titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
+      
+      const textItem = document.createElement("div")
+      textItem.classList.add("menu-text")
+      
+      const textContent = menu[index].desc
+      
+      textItem.innerText= textContent
+      
+      menuItem.appendChild(titleItem)
+      menuItem.appendChild(textItem)
+      singleItem.appendChild(menuItem)
+    }
+  }  
+}
+/******** CONTENT PART JAPAN END ********/
+
+
+/******** CONTENT PART CHINA START ********/
+
+chinabtn.addEventListener("click",clickchina)
+
+function clickchina() {
+  for (var index=0;index<menu.length;index++){
+    if(menu[index].category==="China"){
+
+      const itemDOM = document.querySelector(".section-center")
+      
+      const singleItem = document.createElement("div")
+      singleItem.className = ("col-sm-12 col-lg-6 menu-items")
+      itemDOM.appendChild(singleItem)
+      
+      /** Image Item Start **/
+      const imgItem = document.createElement("img")
+      const urlItem = menu[index].img
+      imgItem.setAttribute("src", urlItem)
+      imgItem.classList.add("photo")
+      singleItem.appendChild(imgItem)
+      /** Image Item End   **/
+      
+      //console.log(menu.length)
+      /** Menu Start **/
+      //console.log(index)
+      
+      const menuItem = document.createElement("div")
+      menuItem.classList.add("menu-info")
+      
+      const titleItem = document.createElement("div")
+      titleItem.classList.add("menu-title")
+      
+      titleItem.innerHTML = `<h4>${menu[index].title}</h4><h4>${menu[index].price}</h4>`
+      
+      const textItem = document.createElement("div")
+      textItem.classList.add("menu-text")
+      
+      const textContent = menu[index].desc
+      
+      textItem.innerText= textContent
+      
+      menuItem.appendChild(titleItem)
+      menuItem.appendChild(textItem)
+      singleItem.appendChild(menuItem)
+    }
+  }  
+}
+/******** CONTENT PART CHINA END ********/
 
 
 
